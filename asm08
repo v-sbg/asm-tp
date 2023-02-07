@@ -1,0 +1,21 @@
+section .data
+  message db 'Result: 0x', 0
+
+section .text
+  global _start
+
+_start:
+  mov eax, [esp+4] ; lire la valeur d'entrée
+  mov ebx, [esp+8] ; lire la base source
+  mov ecx, [esp+12] ; lire la base cible
+
+  ; conversion ici ...
+
+  ; afficher le résultat
+  mov edx, 4 ; longueur du message
+  mov eax, 4 ; fonction d'affichage
+  mov ebx, 1 ; descripteur de sortie
+  mov ecx, message
+  int 0x80
+
+  mov eax,
