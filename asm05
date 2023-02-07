@@ -1,0 +1,16 @@
+section .text
+  global _start
+
+_start:
+  mov eax, [esp+4] ; lire le premier nombre
+  add eax, [esp+8] ; additionner le second nombre
+
+  ; afficher le résultat
+  mov ebx, 1
+  mov ecx, eax
+  mov edx, 4
+  mov eax, 4
+  int 0x80
+
+  mov eax, 0
+  ret
