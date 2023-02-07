@@ -1,0 +1,28 @@
+section .text
+  global _start
+
+_start:
+  mov eax, [esp+4] ; lire la valeur d'entrée
+  dec eax ; pour exclure la valeur d'entrée elle-même
+
+  xor ebx, ebx ; initialiser la somme à 0
+
+loop:
+  cmp eax, 0
+  jle end
+
+  add ebx, eax ; ajouter la valeur actuelle à la somme
+
+  dec eax ; décrémenter la valeur
+  jmp loop
+
+end:
+  ; afficher le résultat
+  mov eax, 4
+  mov ecx, ebx
+  mov edx, 4
+  mov ebx, 1
+  int 0x80
+
+  mov eax, 0
+  ret
