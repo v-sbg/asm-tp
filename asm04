@@ -1,0 +1,14 @@
+section .text
+  global _start
+
+_start:
+  mov eax, [esp+4] ; lire la valeur d'entrée
+  and eax, 1
+  jz pair
+
+  mov eax, 1
+  ret
+
+pair:
+  mov eax, 0
+  ret
