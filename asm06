@@ -1,0 +1,29 @@
+section .text
+  global _start
+
+_start:
+  mov eax, [esp+4] ; lire la valeur d'entrée
+  mov ebx, 2
+  mov ecx, eax
+  shr ecx, 1 ; décaler la valeur d'entrée pour la racine carrée
+
+loop:
+  cmp ebx, ecx
+  jg end
+
+  ; vérifier si la valeur d'entrée est divisible par ebx
+  xor edx, edx
+  div eb
+cmp edx, 0
+  jne not_prime
+
+  mov eax, 1
+  ret
+
+not_prime:
+  add ebx, 1
+  jmp loop
+
+end:
+  mov eax, 0
+  ret
