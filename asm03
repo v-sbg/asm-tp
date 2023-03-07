@@ -5,7 +5,7 @@ section .text
   global _start
 
 _start:
-  mov eax, [esp+4] ; lire la valeur d'entrée
+  mov eax, [esp+4] ; lire la valeur en entrée
   cmp eax, 42
   jne error
 
