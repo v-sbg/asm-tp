@@ -2,7 +2,7 @@ section .text
   global _start
 
 _start:
-  mov eax, [esp+4] ; lire la valeur d'entrée
+  mov eax, [esp+4] ; lire la valeur en entrée
   dec eax ; pour exclure la valeur d'entrée elle-même
 
   xor ebx, ebx ; initialiser la somme à 0
