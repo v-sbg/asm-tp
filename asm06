@@ -2,7 +2,7 @@ section .text
   global _start
 
 _start:
-  mov eax, [esp+4] ; lire la valeur d'entrée
+  mov eax, [esp+4] ; lire la valeur en entrée
   mov ebx, 2
   mov ecx, eax
   shr ecx, 1 ; décaler la valeur d'entrée pour la racine carrée
