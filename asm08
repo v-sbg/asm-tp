@@ -9,7 +9,7 @@ _start:
   mov ebx, [esp+8] ; lire la base source
   mov ecx, [esp+12] ; lire la base cible
 
-  ; conversion ici ...
+  ; conversion ici 
 
   ; afficher le résultat
   mov edx, 4 ; longueur du message
